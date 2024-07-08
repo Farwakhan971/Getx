@@ -20,6 +20,12 @@ class _ScreenoneState extends State<Screenone> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Container(
+            color: Colors.amber,
+            height: Get.height * .4,
+            width: Get.width * .8,
+            child: Center(child: Text('Container 1')),
+          ),
           Center(
             child: TextButton(onPressed: (){
               //Get.to(screentwo());

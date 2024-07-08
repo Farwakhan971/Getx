@@ -17,11 +17,28 @@ class _screentwoState extends State<screentwo> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(Get.arguments[0]),
+         // Text(Get.arguments[0]),
+          ListTile(
+            title: Text('message'.tr),
+            subtitle: Text('name'.tr) ,
+          ),
+          Row(
+            children: [
+              OutlinedButton(onPressed: (){
+                Get.updateLocale(const Locale('en', 'US'));
+              }, child: const Text('English')),
+              const SizedBox(
+                width: 20,
+              ),
+              OutlinedButton(onPressed: (){
+                 Get.updateLocale(const Locale('ur', 'PK'));
+              }, child: const Text('Urdu')),
+            ],
+          ),
           Center(
             child: TextButton(onPressed: (){
               Get.back();
-            }, child: Text('Go back')),
+            }, child: const Text('Go back')),
           )
         ],
       ),
